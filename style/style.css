@@ -1,176 +1,30 @@
-                                        /*UNIVERSAL*/
-.span{
-  background-color: #8f0000;
-  color: white;
+/*UNIVERSAL*/
+.container{
+  padding: 0;
+  margin: 0;
 }
-.title{
-  font-size: 7vw;
-  font-weight: 700;
-  padding: 0.8em;
-  color: #8f0000;
+/*BODY*/
+
+
+/*Carousel*/
+#featured .carousel-item img{
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
 }
-.photo {
-  position: relative;
-  text-align: center;
-  height: 25em;
-  z-index: 100;
-}
-.imgText {
-    position: relative;
-    padding: 3% 0 1% 0;
-    color: white;
-    font-size: 8vw;
-}
-.topImgText {
-    position: relative;
-    padding: 3% 0 1% 0;
-    color: white;
-    font-size: 8vw;
-}
-                                      /* HEADER */
-#shoes {
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(180,150,250, 0.1)),
-              url(http://res.cloudinary.com/redkasa/image/upload/v1494171340/shoeselect2_vr7h4z.jpg) no-repeat fixed;
-  background-size: cover;
+.headings{
+  font-size: 5em;
 }
 
+
+.carousel-ctonrol .icon-prev,
+.carousel-ctonrol .icon-prev{
+  font-size: 100px;
+  margin-top: -70px;
+}
 
 /*Navigation*/
-.navigation{
-  text-align: center;
-  color: #8f0000;
-  background-color: #F4F4F6;
-  opacity: 0.8;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 101;
-}
-
-nav a {
-  display: inline-block;
-  padding: 15px 20px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  transition: background .5s ease-in, transform .3s .25s ease-in-out;
-}
-
-nav a:hover {
-  background: #9999A1;
-	transform: scale(1.2);
-}
-
-nav:hover {
-  opacity: 1.0;
-  transition: opacity 1.2s ease-in-out;
-}
-
-.header{
-  margin-top: 4em;
-}
-
-                                    /*ICONS*/
-
-.icons {
-  padding: 3%;
-  font-size: 2vw;
-}
-                                    /*LOCATION & DATES*/
-.map {
-  height: 13em;
-  width: 100%;
-  background-color: grey;
-}
-.dotw{
-  font-size: 3.5vw;
-  color: #8f0000;
-}
-                                      /*SOCIALS*/
-
-#socials {
-  background: linear-gradient(rgba(255,255,255, 0.1 ), rgba(0, 0, 0, 0.5)),
-              url(http://res.cloudinary.com/redkasa/image/upload/v1494173450/socialdance_yvaaks.jpg) no-repeat fixed;
-  background-size: cover;
-}
-.socials{
-  font: white;
-  font-size: 2.5vw;
-}
-.socialsTitle{
-  font: white;
-  font-size: 5vw;
-  font-weight: 700;
-}
-
-
-                                    /* TESTIMONIALS */
-.testimon{
-  width: 32%;
-  padding: 1em, 1em;
-}
-
-.testmimonialImg {
-  width: 40%;
-  border-radius: 50%;
-  display: block;
-}
-
-                                    /*FOOTER*/
-
-.social{
-    color: white;
-    border-radius: 50%;
-    padding: 0.5em;
-    opacity: 0.5;
-}
-
-#hanging {
-  background: linear-gradient(rgba(255,255,255, 0.1 ), rgba(0, 0, 0, 0.5)),
-              url(http://res.cloudinary.com/redkasa/image/upload/v1494084119/hangingshoes_mdaghy.jpg) no-repeat fixed;
-  background-size: cover;
-}
-
-.social:hover{
-    opacity: 0.9;
-     -webkit-transition: background-color 0.5s ease-in;
-     -moz-transition: background-color 0.5s ease-in;
-     -o-transition: background-color 0.5s ease-in;
-}
-.contact{
-    font-size: 3.5vw;
-    font-weight: 900;
-}
 
 /* MEDIA QUERIES*/
 
-@media (max-width: 585px) {
-.topImgText {
-    padding-top: 40%;
-    padding-bottom: 1%
-  }
-.imgText {
-      padding-top: 30%;
-      padding-bottom: 0;
-    }
-.title {
-      padding-top: 30%;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-.contact{
-      font-size: 5vw;
-      font-weight: 900;
-  }
-.dotw{
-  font-size: 7vw;
-  color: #8f0000;
-  }
-.icons {
-  font-size: 6vw;
-  }
-#socials{
-  height: 20em;
-}
-}
+/* FOOTER */
