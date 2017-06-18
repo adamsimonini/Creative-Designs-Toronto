@@ -19,10 +19,10 @@
     </script>
 
     <!-- Custom JS     -->
-    <script src ="script.js"></script>
+    <script src ="src/script.js"></script>
 
     <!-- Tether JS -->
-    <script src="  https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
 
     <!-- BOOTSTRAP -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
@@ -35,8 +35,9 @@
     <link rel="stylesheet" href="style/style.css">
 
     <!-- Google Map API Calls -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQxPuXUrAc3Q7ciNecu1C0tg-sUObADCc&callback=initMap"
-      type="text/javascript"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDRDHaaHmccrpAQrnudvrBo3Huy29LAI&callback=initMap">
+    </script>
   </head>
 
   <body>
@@ -84,17 +85,41 @@
     </div> <!-- carousel -->
   </section>
 
-  <fieldset class="form-group">
-    <legend>Contact Us</legend>
-      <div class="form-group">
-        <label for="clientname">Name</label>
-        <input type="text" id="clientname" placeholder="">
+  <section class="container purple-bg text-center"> <!-- Form Start -->
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="form-group">
+          <h3>Contact Us</h3>
+            <div class="form-group">
+              <label for="clientname">Name</label>
+              <input type="text" class="purple-text" id="clientname" placeholder="">
+            </div> <!-- form group -->
+            <div class="form-group">
+              <label for="clientname">E-mail</label>
+              <input type="text" class="purple-text" id="clientname" placeholder="">
+            </div> <!-- form group -->
+            <div class="form-group">
+              <label for="inquerytype">Nature of Inquery</label>
+              <select class="form-control purple-text" id="regarding">
+                <option value="SiteCreation">Website Creation</option>
+                <option value="Marketing">Marketing/Design</option>
+                <option value="Design">Design</option>
+                <option value="Consultation">Consultation</option>
+                <option value="Other">Other</option>
+              </select>
+            </div> <!-- form group -->
+            <div class="form-group">
+              <label for="details">Details</label>
+              <textarea class="form-control purple-text" id="details" placeholder="How may we help you?"></textarea>
+            </div> <!-- form group -->
+        </fieldset>
       </div>
-      <div class="form-group">
-        <label for="clientname">E-mail</label>
-        <input type="text" id="clientname" placeholder="">
+      <div class="col-sm-6">
+        <h3>Headquarters</h3>
+        <div id="map"></div>
       </div>
-  </fieldset>
+    </div>
+  </section> <!-- Form End -->
 
   <footer>
     <section class="span">
@@ -106,15 +131,4 @@
   </footer>
 </body>
 
-<!-- Google Analytics Tag Information -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-100894383-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
 </html>
