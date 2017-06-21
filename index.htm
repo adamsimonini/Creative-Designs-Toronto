@@ -38,6 +38,9 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDRDHaaHmccrpAQrnudvrBo3Huy29LAI&callback=initMap">
     </script>
+
+    <!-- reCAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
   <body>
@@ -84,39 +87,47 @@
       </a>
     </div> <!-- carousel -->
   </section>
+<!-- Invisible iFrame for php page to open in, thereby avoiding redirect -->
+<iframe name="contactSubmit" style="display:none;"></iframe>
 
   <section class="purple-bg text-center" style="padding:1em;"> <!-- Form Start -->
     <div class="row">
       <div class="col-sm-6">
-        <fieldset class="form-group">
-          <h3>Contact Us</h3>
-            <div class="form-group">
-              <label for="clientName">Name</label>
-              <input type="text" class="purple-text" id="clientname" placeholder="">
-            </div> <!-- form group -->
-            <div class="form-group">
-              <label for="eMail" type="email">E-mail</label>
-              <input type="text" class="purple-text" id="clientname" placeholder="">
-            </div> <!-- form group -->
-            <div class="form-group">
-              <label for="inqueryType">Nature of Inquery</label>
-              <select class="form-control purple-text" id="regarding">
-                <option value="SiteCreation">Website Creation</option>
-                <option value="Marketing">Marketing/Design</option>
-                <option value="Design">Design</option>
-                <option value="Consultation">Consultation</option>
-                <option value="Other">Other</option>
-              </select>
-            </div> <!-- form group -->
-            <div class="form-group">
-              <label for="details">Details</label>
-              <textarea class="form-control purple-text" id="details" placeholder="How may we help you?"></textarea>
-            </div> <!-- form group -->
-                <button> Submit </button>
-        </fieldset>
+        <form method="post" action="contact-form.php" target="contactSubmit">
+          <fieldset class="form-group">
+            <h3>Contact Us</h3>
+              <div class="form-group">
+                <label for="clientName">Name</label>
+                <input name="clientName" type="text" class="purple-text" id="clientname" placeholder="">
+              </div> <!-- form group -->
+              <div class="form-group">
+                <label for="clientEmail" type="email">E-mail</label>
+                <input name="clientEmail" type="text" class="purple-text" id="clientEmail" placeholder="">
+              </div> <!-- form group -->
+              <div class="form-group">
+                <label for="inqueryType">Nature of Inquery</label>
+                <select name="inquery" class="form-control purple-text" id="inquery">
+                  <option value="Website Creation">Website Creation</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Design">Design</option>
+                  <option value="Consultation">Consultation</option>-
+                  <option value="Other">Other</option>
+                </select>
+              </div> <!-- form group -->
+              <div class="form-group">
+                <label for="details">Details</label>
+                <textarea name="clientMessage" class="form-control purple-text" id="details" placeholder="How may we help you?"></textarea>
+              </div> <!-- form group -->
+              <div class="g-recaptcha" data-sitekey="6LdSZCYUAAAAAOMWKTijTksZcoEQRvxdcb6nvUCv"></div>
+              <input type="submit" name="submit" id="contact-button">
+              <div id="success"></div>
+          </fieldset>
+        </form>
       </div>
       <div class="col-sm-6">
         <h3>Headquarters</h3>
+        <a target="_blank" href="https://www.google.ca/maps/place/CF+Fairview+Mall/@43.7777485,-79.3469631,17z/data=!3m1!4b1!4m5!3m4!1s0x89d4d2f06edef403:0xd3a2c398cf72cf06!8m2!3d43.7777446!4d-79.3447744">
+          <i class="fa fa-map fa-1x"></i> 1800 Sheppard Ave E, North York, ON M2J 5A7 </a>
         <div id="map"></div>
       </div>
     </div>
