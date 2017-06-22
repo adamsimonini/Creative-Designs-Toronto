@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.creativedesignstoronto\.com$ [NC]
+RewriteRule ^(.*)$ https://www.creativedesignstoronto.com/$1 [R=301,L]
