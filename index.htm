@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" hreflang="English">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -19,7 +19,8 @@
     </script>
 
     <!-- Custom JS     -->
-    <script src ="src/script.js"></script>
+    <script type="text/javascript" src ="js/script.js"></script>
+    <script type="text/javascript" src="js/contact-form.js"></script>
 
     <!-- Tether JS -->
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
@@ -93,20 +94,20 @@
   <section class="purple-bg text-center" style="padding:1em;"> <!-- Form Start -->
     <div class="row">
       <div class="col-sm-6">
-        <form method="post" action="contact-form.php" target="contactSubmit">
+        <form role="form" id="contactForm">
           <fieldset class="form-group">
             <h3>Contact Us</h3>
               <div class="form-group">
                 <label for="clientName">Name</label>
-                <input name="clientName" type="text" class="purple-text" id="clientname" placeholder="">
+                <input name="clientName" type="text" class="purple-text" id="clientName" placeholder="Enter Name" required>
               </div> <!-- form group -->
               <div class="form-group">
                 <label for="clientEmail" type="email">E-mail</label>
-                <input name="clientEmail" type="text" class="purple-text" id="clientEmail" placeholder="">
+                <input name="clientEmail" type="text" class="purple-text" id="clientEmail" placeholder="Enter E-mail" required>
               </div> <!-- form group -->
               <div class="form-group">
-                <label for="inqueryType">Nature of Inquery</label>
-                <select name="inquery" class="form-control purple-text" id="inquery">
+                <label for="inquiry">Nature of Inquiry</label>
+                <select name="inquiry" class="form-control purple-text" id="inquiry">
                   <option value="Website Creation">Website Creation</option>
                   <option value="Marketing">Marketing</option>
                   <option value="Design">Design</option>
@@ -115,13 +116,13 @@
                 </select>
               </div> <!-- form group -->
               <div class="form-group">
-                <label for="details">Details</label>
-                <textarea name="clientMessage" class="form-control purple-text" id="details" placeholder="How may we help you?"></textarea>
+                <label for="clientMessage">Details</label>
+                <textarea name="clientMessage" class="form-control purple-text" id="clientMessage" placeholder="How may we help you?" required></textarea>
               </div> <!-- form group -->
               <div class="g-recaptcha" data-sitekey="6LdSZCYUAAAAAOMWKTijTksZcoEQRvxdcb6nvUCv"></div>
-              <input type="submit" name="submit" id="contact-button">
-              <div id="success"></div>
+               <button type="submit" id="form-submit" class="btn btn-primary btn-lg">Submit</button>
           </fieldset>
+          <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
         </form>
       </div>
       <div class="col-sm-6">
