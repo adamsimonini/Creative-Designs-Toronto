@@ -31,6 +31,10 @@
     <!--Custom CSS     -->
     <link rel="stylesheet" href="style/style.css">
 
+    <!-- Custom JS     -->
+    <script type="text/javascript" src ="js/maps.js"></script>
+    <script type="text/javascript" src="js/contact-form.js"></script>
+
     <!-- Google Map API Calls -->
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPDRDHaaHmccrpAQrnudvrBo3Huy29LAI&callback=initMap">
@@ -38,9 +42,6 @@
 
     <!-- reCAPTCHA -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
-    <!-- Custom JS     -->
-    <script type="text/javascript" src="js/contact-form.js"></script>
 
   </head>
 
@@ -88,39 +89,39 @@
       </a>
     </div> <!-- carousel -->
   </section>
-<!-- Invisible iFrame for php page to open in, thereby avoiding redirect -->
-<iframe name="contactSubmit" style="display:none;"></iframe>
+  <!-- Hidden iFrame for preventing submit page reload -->
+  <iframe name="hiddenform" style="display:none;"></iframe>
 
   <section class="purple-bg text-center" style="padding:1em;"> <!-- Form Start -->
     <div class="row">
       <div class="col-sm-6">
-        <form role="form" id="contactForm">
+        <form action="php/contact-form.php" method="POST" target="hiddenform">
           <fieldset class="form-group">
             <h3>Contact Us</h3>
               <div class="form-group">
-                <label for="clientName">Name</label>
-                <input name="clientName" type="text" class="purple-text" id="clientName" placeholder="Enter Name" required>
+                <label for="name">Name</label>
+                <input name="name" type="text" class="purple-text" id="name" placeholder="Enter Name" required>
               </div> <!-- form group -->
               <div class="form-group">
-                <label for="clientEmail" type="email">E-mail</label>
-                <input name="clientEmail" type="text" class="purple-text" id="clientEmail" placeholder="Enter E-mail" required>
+                <label for="email" type="email">E-mail</label>
+                <input name="email" type="text" class="purple-text" id="email" placeholder="Enter E-mail" required>
               </div> <!-- form group -->
               <div class="form-group">
-                <label for="inquiry">Nature of Inquiry</label>
-                <select name="inquiry" class="form-control purple-text" id="inquiry">
+                <label for="type">Nature of Inquiry</label>
+                <select name="type" class="form-control purple-text" id="type">
                   <option value="Website Creation">Website Creation</option>
                   <option value="Marketing">Marketing</option>
                   <option value="Design">Design</option>
-                  <option value="Consultation">Consultation</option>-
+                  <option value="Consultation">Consultation</option>
                   <option value="Other">Other</option>
                 </select>
               </div> <!-- form group -->
               <div class="form-group">
-                <label for="clientMessage">Details</label>
-                <textarea name="clientMessage" class="form-control purple-text" id="clientMessage" placeholder="How may we help you?" required></textarea>
+                <label for="message">Details</label>
+                <textarea name="message" class="form-control purple-text" id="message" placeholder="How may we help you?" required></textarea>
               </div> <!-- form group -->
               <div class="g-recaptcha" data-sitekey="6LdSZCYUAAAAAOMWKTijTksZcoEQRvxdcb6nvUCv"></div>
-               <button type="submit" id="submitButton" class="btn btn-primary btn-lg">Submit</button>
+              <button type="submit" id="submitButton" class="btn btn-primary btn-lg">Submit</button>
           </fieldset>
           <div id="msgSubmit" class="h3 text-center invisible">Message Submitted!</div>
         </form>
@@ -143,6 +144,5 @@
     </section>
   </footer>
 </body>
-<!-- Needs to be at bottom for asyc scripting, else function is missing -->
-    <script type="text/javascript" src ="js/maps.js"></script>
+
 </html>
