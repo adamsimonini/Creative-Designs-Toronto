@@ -4,7 +4,7 @@ $email = $_POST["clientEmail"];
 $message = $_POST["clientMessage"];
 
 $EmailTo = "adam@creativedesignstoronto.com";
-$Subject = $_POST["inqiry"];
+$Subject = $_POST["Potential Client"];
 
 // prepare email body text
 $Body .= "Name: ";

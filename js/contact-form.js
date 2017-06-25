@@ -18,13 +18,15 @@
           type: "POST",
           url: "php/contact-form.php",
           data: "name=" + name + "&email=" + email + "&message=" + message,
-          success : function(text){
+          success: function(text){
               if (text == "success"){
+                  console.log("success!");
                   formSuccess();
               }
           }
       });
   }
   function formSuccess(){
-      $( "#msgSubmit" ).removeClass( "hidden" );
+      console.log("formSuccess success!");
+      $("#msgSubmit").removeClass("hidden");
   }
