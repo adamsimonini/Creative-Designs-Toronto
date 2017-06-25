@@ -18,10 +18,6 @@
       crossorigin="anonymous">
     </script>
 
-    <!-- Custom JS     -->
-    <script type="text/javascript" src ="js/script.js"></script>
-    <script type="text/javascript" src="js/contact-form.js"></script>
-
     <!-- Tether JS -->
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
 
@@ -42,6 +38,10 @@
 
     <!-- reCAPTCHA -->
     <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- Custom JS     -->
+    <script type="text/javascript" src="js/contact-form.js"></script>
+
   </head>
 
   <body>
@@ -120,9 +120,9 @@
                 <textarea name="clientMessage" class="form-control purple-text" id="clientMessage" placeholder="How may we help you?" required></textarea>
               </div> <!-- form group -->
               <div class="g-recaptcha" data-sitekey="6LdSZCYUAAAAAOMWKTijTksZcoEQRvxdcb6nvUCv"></div>
-               <button type="submit" id="form-submit" class="btn btn-primary btn-lg">Submit</button>
+               <button type="submit" id="submitButton" class="btn btn-primary btn-lg">Submit</button>
           </fieldset>
-          <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+          <div id="msgSubmit" class="h3 text-center invisible">Message Submitted!</div>
         </form>
       </div>
       <div class="col-sm-6">
@@ -143,5 +143,6 @@
     </section>
   </footer>
 </body>
-
+<!-- Needs to be at bottom for asyc scripting, else function is missing -->
+    <script type="text/javascript" src ="js/maps.js"></script>
 </html>
